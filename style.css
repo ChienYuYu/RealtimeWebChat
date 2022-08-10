@@ -38,6 +38,13 @@
   border-radius: 20px;
 }
 
+.msg, .my-msg{
+  /* display: inline-block; */
+  /* width: auto; */
+  /* min-width: 30%; */
+  max-width: 70%;
+}
+
 .user-name{
   color: rgb(245, 255, 168);
   width: 33%;
