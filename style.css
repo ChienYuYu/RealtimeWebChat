@@ -1,0 +1,63 @@
+::-webkit-scrollbar {
+  display: none;
+  }
+.wrapper{
+  background:linear-gradient(65deg, rgb(247, 148, 67), rgb(77, 28, 213));
+  min-height: 100vh;
+}
+/* ------------------- */
+.chat-area{
+  position: fixed;
+  height: 85vh;
+  border-radius: 20px;
+  background:linear-gradient(235deg, rgb(246, 163, 95), rgb(130, 96, 226));
+  border: 5px solid rgb(255, 151, 151);
+  overflow: auto;
+
+}
+@media (max-width: 900px) { 
+  .chat-area{
+    overflow: auto;
+  }
+ }
+@media (max-width: 430px) { 
+  .chat-area{
+    height: 100%;
+    border-radius: 0;
+  }
+ }
+
+.msg-list .msg{
+  box-shadow: 1px 1px 3px rgb(179, 115, 99);
+  background: rgba(244, 82, 82, 0.5);
+  border-radius: 20px;
+}
+.msg-list .my-msg{
+  box-shadow: 1px 1px 3px rgb(179, 115, 99);
+  background: rgba(20, 55, 254, 0.5);
+  border-radius: 20px;
+}
+
+.user-name{
+  color: rgb(245, 255, 168);
+  width: 33%;
+  font-weight:bolder;
+}
+/* ------------------- */
+textarea{
+  resize : none;
+}
+.input-msg-area{
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+}
+
+.submit-btn{
+  background: rgb(227, 70, 156);
+  color: #fff;
+}
+.submit-btn:hover{
+  background: rgb(250, 114, 189);
+  color: #fff;
+}
