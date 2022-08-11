@@ -4,7 +4,6 @@ const app = firebase.initializeApp({
   da123tabaseURL: "https://realtimewebchat-39960-default-rtdb.firebaseio.com",
   projectId: "realtimewebchat-39960",
   storageBucket: "realtimewebchat-39960.appspot.com",
-  // messagingSenderId: "133727842119",
   appId: "1:711206137885:web:9e1b4939843872ea4e16f4"
 });
 //-----------------------------------
@@ -23,11 +22,16 @@ function addMessage() {
   })
   textMsg.value = ''
 }
-submitBtn.addEventListener('click', addMessage)
-textMsg.addEventListener('keypress', (e) => {
-  if (e.key == 'Enter') {
+
+submitBtn.addEventListener('click', () => {
+  if(textMsg.value.trim() !== ''){
     addMessage();
-  }
+  } else { return }
+})
+textMsg.addEventListener('keypress', (e) => {
+  if (e.key == 'Enter' && textMsg.value.trim() !== '') {
+    addMessage();
+  } else { return }
 })
 
 // 顯示訊息

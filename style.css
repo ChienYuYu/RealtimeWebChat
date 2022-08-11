@@ -100,3 +100,7 @@
   background: rgb(250, 114, 189);
   color: #fff;
 }
+.submit-btn:focus{
+  box-shadow:none;
+  outline: none;
+}
