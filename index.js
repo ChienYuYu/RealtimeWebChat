@@ -40,7 +40,7 @@ messages.on('value', (snapshot) => {
       str += `<li class="my-msg mb-3">
       <span class="user-name mb-0 text-nowrap w-100 d-block
       text-end px-3 pt-1">${data[item].userName}</span>
-      <p class="px-3 py-2 text-white">
+      <p class="p-2 text-white">
         ${data[item].message}
       </p>
     </li>`
@@ -48,13 +48,18 @@ messages.on('value', (snapshot) => {
       str += `<li class="msg mb-3">
       <span class="user-name mb-0 text-nowrap w-100 d-block
       text-start px-3 pt-1">${data[item].userName}</span>
-      <p class="px-3 py-2 text-white">
+      <p class="p-2 text-white">
         ${data[item].message}
       </p>
     </li>`
     }
   }
   msgList.innerHTML = str;
+  goBottom();
 })
 
 // 設定總是置底
+function goBottom() {
+  let div = document.querySelector('.chat-area');
+  div.scrollTop = div.scrollHeight;
+}

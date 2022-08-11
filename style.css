@@ -31,29 +31,35 @@
   display: flex;
   flex-direction: column;
 }
-/* .msg-list .msg{
-  border: 1px solid #333;
-} */
 .user-name{
   color: rgb(245, 255, 168);
   width: 33%;
   font-weight:bolder;
 }
+.msg, .my-msg {
+  max-width: 70%;
+}
+.msg-list .msg{
+  align-self: start;
+}
+
 .msg-list .my-msg{
   align-self: end;
+  display: flex;
+  flex-direction: column;
 }
 .msg p{
   background: rgba(244, 82, 82, 0.5);
   border-radius: 20px;
   box-shadow: 1px 1px 3px rgb(179, 115, 99);
+  display: inline-block;
 }
 .my-msg p{
   background: rgba(20, 55, 254, 0.5);
   border-radius: 20px;
   box-shadow: 1px 1px 3px rgb(179, 115, 99);
-}
-.msg, .my-msg {
-  max-width: 70%;
+  display: inline-block;
+  align-self: end;
 }
 /* ------------------- */
 .input-msg-area{
