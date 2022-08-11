@@ -1,7 +1,7 @@
 const app = firebase.initializeApp({
   apiKey: "AIzaSyBb7Z-k4dLGRDPLjtlrsDusJEGQceBtvbY",
   authDomain: "realtimewebchat-39960.firebaseapp.com",
-  // da123tabaseURL: "https://realtimewebchat-39960-default-rtdb.firebaseio.com",
+  da123tabaseURL: "https://realtimewebchat-39960-default-rtdb.firebaseio.com",
   projectId: "realtimewebchat-39960",
   storageBucket: "realtimewebchat-39960.appspot.com",
   // messagingSenderId: "133727842119",
@@ -37,20 +37,24 @@ messages.on('value', (snapshot) => {
   console.log(data);
   for (item in data) {
     if (data[item].userName == userName) {
-      str += `<li class="my-msg ms-auto">
-      <p class="user-name mb-0 text-nowrap w-100 text-end px-3 pt-1">${data[item].userName}</p>
-      <p class="p-2 text-white">
+      str += `<li class="my-msg mb-3">
+      <span class="user-name mb-0 text-nowrap w-100 d-block
+      text-end px-3 pt-1">${data[item].userName}</span>
+      <p class="px-3 py-2 text-white">
         ${data[item].message}
       </p>
     </li>`
     } else {
-      str += `<li class="msg me-auto">
-      <p class="user-name mb-0 text-nowrap w-100 text-start px-3 pt-1">${data[item].userName}</p>
-      <p class="p-2 text-white">
-      ${data[item].message}
+      str += `<li class="msg mb-3">
+      <span class="user-name mb-0 text-nowrap w-100 d-block
+      text-start px-3 pt-1">${data[item].userName}</span>
+      <p class="px-3 py-2 text-white">
+        ${data[item].message}
       </p>
     </li>`
     }
   }
   msgList.innerHTML = str;
 })
+
+// 設定總是置底

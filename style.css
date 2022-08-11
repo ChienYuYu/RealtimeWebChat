@@ -26,34 +26,36 @@
     border-radius: 0;
   }
  }
-
-.msg-list .msg{
-  box-shadow: 1px 1px 3px rgb(179, 115, 99);
-  background: rgba(244, 82, 82, 0.5);
-  border-radius: 20px;
+/* ------------------- */
+.msg-list{
+  display: flex;
+  flex-direction: column;
 }
-.msg-list .my-msg{
-  box-shadow: 1px 1px 3px rgb(179, 115, 99);
-  background: rgba(20, 55, 254, 0.5);
-  border-radius: 20px;
-}
-
-.msg, .my-msg{
-  /* display: inline-block; */
-  /* width: auto; */
-  /* min-width: 30%; */
-  max-width: 70%;
-}
-
+/* .msg-list .msg{
+  border: 1px solid #333;
+} */
 .user-name{
   color: rgb(245, 255, 168);
   width: 33%;
   font-weight:bolder;
 }
-/* ------------------- */
-textarea{
-  resize : none;
+.msg-list .my-msg{
+  align-self: end;
 }
+.msg p{
+  background: rgba(244, 82, 82, 0.5);
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px rgb(179, 115, 99);
+}
+.my-msg p{
+  background: rgba(20, 55, 254, 0.5);
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px rgb(179, 115, 99);
+}
+.msg, .my-msg {
+  max-width: 70%;
+}
+/* ------------------- */
 .input-msg-area{
   position: fixed;
   bottom: 0;
