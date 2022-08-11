@@ -13,7 +13,7 @@ let messages = firebase.database().ref('messages');
 const msgList = document.querySelector('.msg-list'); //<ul>
 const textMsg = document.querySelector('.text-input'); //<input>
 const submitBtn = document.querySelector('.submit-btn'); //<button>
-let userName = prompt('請輸入要使用的名稱')
+// let userName = prompt('請輸入要使用的名稱')
 
 // 寫入訊息
 function addMessage() {
@@ -58,7 +58,7 @@ messages.on('value', (snapshot) => {
   goBottom();
 })
 
-// 設定總是置底
+// 置底顯示
 function goBottom() {
   let div = document.querySelector('.chat-area');
   div.scrollTop = div.scrollHeight;
