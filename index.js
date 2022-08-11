@@ -13,7 +13,7 @@ let messages = firebase.database().ref('messages');
 const msgList = document.querySelector('.msg-list'); //<ul>
 const textMsg = document.querySelector('.text-input'); //<input>
 const submitBtn = document.querySelector('.submit-btn'); //<button>
-// let userName = prompt('請輸入要使用的名稱')
+let userName = prompt('請輸入要使用的名稱')
 
 // 寫入訊息
 function addMessage() {
@@ -39,7 +39,7 @@ messages.on('value', (snapshot) => {
     if (data[item].userName == userName) {
       str += `<li class="my-msg mb-3">
       <span class="user-name mb-0 text-nowrap w-100 d-block
-      text-end px-3 pt-1">${data[item].userName}</span>
+      text-end pt-1">${data[item].userName}</span>
       <p class="p-2 text-white">
         ${data[item].message}
       </p>
@@ -47,7 +47,7 @@ messages.on('value', (snapshot) => {
     } else {
       str += `<li class="msg mb-3">
       <span class="user-name mb-0 text-nowrap w-100 d-block
-      text-start px-3 pt-1">${data[item].userName}</span>
+      text-start pt-1">${data[item].userName}</span>
       <p class="p-2 text-white">
         ${data[item].message}
       </p>
